@@ -2,38 +2,33 @@ const grades = [73,91,88,56,62,84,95,96,88,92]
 // get range 
 //get median
 //get second half range
- function getLowestGrade() {
+ function getLowestGrade(Arr) {
      let currentLowestGrade = 100
-   for (var i = 0; i < grades.length; i++) {
-     if (grades[i] < currentLowestGrade ) {
-       currentLowestGrade = grades[i]
+   for (var i = 0; i < Arr.length; i++) {
+     if (Arr[i] < currentLowestGrade ) {
+       currentLowestGrade = Arr[i]
      }
    }
    console.log(`The lowest grade is ${currentLowestGrade}`)
    return currentLowestGrade
  }
  
-getLowestGrade()
 
-function getHighestGrade() {
+function getHighestGrade(Arr) {
   let currentHighestGrade = 0
-  for (let i = 0; i < grades.length; i++) {
-    if (grades[i] > currentHighestGrade) {
-      currentHighestGrade = grades[i]
+  for (let i = 0; i < Arr.length; i++) {
+    if (Arr[i] > currentHighestGrade) {
+      currentHighestGrade = Arr[i]
     }    
   }
   console.log(`The highest grade is ${currentHighestGrade}`)
   return currentHighestGrade
 }
 
-getHighestGrade()
-
-function getRange() {
-  let Range = (getHighestGrade() - getLowestGrade())
+function getRange(Arr) {
+  let Range = (getHighestGrade(Arr) - getLowestGrade(Arr))
   console.log(`The range is ${Range}`)
 }
-
-getRange()
 
 function getSortedGrades(Arr) {
   let sorted = Arr.sort()
@@ -49,8 +44,6 @@ function getMedian(Arr) {
   
 }
 
-getMedian(grades)
-
 function getHalfPointIndex(Arr) {
   let halfPointIndex
   // I arbitrarily concluded that if the ammount of grades is odd then the first half would be one grade greater than the latter
@@ -59,8 +52,18 @@ function getHalfPointIndex(Arr) {
   
 }
 
+function getSecondHalfGrades(Arr) {
+  let halfPointIndex = getHalfPointIndex(Arr)
+  let secondHalfGradesArr = []
+  for (let i = halfPointIndex; i < Arr.length; i++) {
+    secondHalfGradesArr += Arr[i]
+  }
+  return secondHalfGradesArr
+  
+}
 
 function getHalfRange(Arr) {
-let middleYearGrade = getHalfPointIndex(Arr)
-  getMedian()
+  gradeList = getSecondHalfGrades(Arr)
+  return getRange(gradeList)
+  
 }
