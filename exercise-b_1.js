@@ -1,4 +1,4 @@
-const grades = [73,91,88,56,62,84,95,96,88,92]
+const grades = [73,91,56,62,84,95,96,88,92]
 // get range 
 //get median
 //get second half range
@@ -74,11 +74,10 @@ function getHalfRange(Arr) {
 
 
 function getStats(Arr) {
-  console.log (getRange(Arr))
-  console.log (getMedian(Arr))
-  console.log (getHalfRange(Arr))
+  console.log("Stats:"+ "\n\tRange: " + getRange(Arr) + "\n\tMedian: " + getMedian(Arr) + "\n\tHalf Range: "+ getHalfRange(Arr))
+
 }
 
 // getSecondHalfGrades(grades)
 // getHalfRange(grades)
-// getStats(grades)
+getStats(grades)
