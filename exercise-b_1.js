@@ -82,6 +82,4 @@ function getStats(Arr) {
 
 }
 
-// getSecondHalfGrades(grades)
-// getHalfRange(grades)
 getStats(grades)
