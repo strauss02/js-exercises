@@ -1,4 +1,4 @@
-const grades = [73,91,56,62,84,95,96,88,92]
+const grades = [5,10,15,20,67,2,97,45]
 // get range 
 //get median
 //get second half range
@@ -32,13 +32,14 @@ function getRange(Arr) {
 }
 
 function getSortedGrades(Arr) {
-  let sorted = [...Arr].sort()
+  let sorted = [...Arr].sort((a, b) => (a - b))
   return sorted
 }
 
 function getMedian(Arr) {
   let localSortedGrades = getSortedGrades(Arr)
-  let medianIndex = (((Arr.length)/2)-1)
+  // let medianIndex = (((Arr.length)/2)-1)
+  let medianIndex = getHalfPointIndex(localSortedGrades)
   let medianGrade = localSortedGrades[medianIndex]
   // console.log(`the median grade is  ${medianGrade}`)
   return medianGrade
