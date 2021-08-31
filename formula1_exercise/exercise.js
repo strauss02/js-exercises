@@ -36,4 +36,3 @@ function countWin(driver) {
 }
 
 formula1Champions.forEach(countWin)
-console.log(winners)
