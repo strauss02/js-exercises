@@ -1,10 +1,13 @@
+// commented out console log lines are testing artifacts. forgive me if it hurts your eyes
+
+
 const grades = [5,10,15,20,67,2,97,45]
-// get range 
+//get range 
 //get median
 //get second half range
  function getLowestGrade(Arr) {
      let currentLowestGrade = 100
-   for (var i = 0; i < Arr.length; i++) {
+   for (let i = 0; i < Arr.length; i++) {
      if (Arr[i] < currentLowestGrade ) {
        currentLowestGrade = Arr[i]
      }
